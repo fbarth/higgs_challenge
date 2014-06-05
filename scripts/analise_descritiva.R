@@ -64,8 +64,4 @@ with(training[!is.na(training[,30]),], sm.density.compare(PRI_jet_subleading_phi
 with(training[!is.na(training[,31]),], sm.density.compare(PRI_jet_all_pt, Label))
 dev.off()
 
-#
-# TODO remover os NA's ou preencher? Como? Os exemplos ou os atributos?
-#
-# Deixar desbalanceado o dataset ou nao?
-#
+save(training, file='data/training_com_na.Rda')
